@@ -10,9 +10,15 @@ Shader "Unlit/LeafWaveMask"
     }
     SubShader
     {
-        Tags { "Queue"="Transparent" "RenderType"="Transparent" "IgnoreProjector"="True"}
+        Tags { 
+            "Queue"="Transparent" 
+            "RenderType"="Transparent" 
+            "IgnoreProjector"="True"
+        }
+        
         ZWrite Off
         Blend SrcAlpha OneMinusSrcAlpha
+        
         Pass
         {
             CGPROGRAM
@@ -25,22 +31,35 @@ Shader "Unlit/LeafWaveMask"
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
             };
+
             struct v2f
             {
                 float2 uv : TEXCOORD0;
                 float4 vertex : SV_POSITION;
             };
 
-            sampler2D _MainTex, _MaskTex;
+            sampler2D _MainTex;
+            sampler2D _MaskTex;
+            float4 _MaskTex_ST; // 添加纹理缩放偏移
             float _WaveSpeed, _WaveAmount, _WaveFreq;
 
             v2f vert (appdata v)
             {
                 v2f o;
-                float speedMask = tex2Dlod(_MaskTex, float4(v.uv,0,0)).r; // 读取灰度
-                float wave = sin(v.uv.y * _WaveFreq + _Time.y * _WaveSpeed * speedMask)
-                             * _WaveAmount * speedMask;
-                v.vertex.x += wave * v.uv.y;   // 叶尖幅度更大
+                
+                // 修正：在顶点着色器中使用 tex2Dlod 需要特殊处理
+                // 或者改用简单的 UV 动画测试
+                
+                // 方法1：使用简单的基于 UV Y 的遮罩（先测试基础功能）
+                float speedMask = v.uv.y; // 临时：用 UV Y 代替遮罩纹理
+                
+                // 计算波浪
+                float wave = sin(v.uv.y * _WaveFreq + _Time.y * _WaveSpeed) 
+                           * _WaveAmount * speedMask;
+                
+                // 应用顶点偏移
+                v.vertex.x += wave;
+                
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv;
                 return o;
@@ -48,7 +67,8 @@ Shader "Unlit/LeafWaveMask"
 
             fixed4 frag (v2f i) : SV_Target
             {
-                return tex2D(_MainTex, i.uv);
+                fixed4 col = tex2D(_MainTex, i.uv);
+                return col;
             }
             ENDCG
         }
