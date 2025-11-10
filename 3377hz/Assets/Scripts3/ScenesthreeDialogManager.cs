@@ -40,8 +40,8 @@ public class DialogData
     public string extProp;    // CSV第7列：扩展属性（背景|物品）
 }
 
-// ==================== 核心管理脚本（支持按钮颜色自定义）====================
-public class DialogManager : MonoBehaviour
+// ==================== 核心管理脚本（类名改为 ScenesthreeDialogManager）====================
+public class ScenesthreeDialogManager : MonoBehaviour
 {
     // ==== 基础配置（拖拽赋值）====
     public TextAsset dialogDataFile;       // CSV文件
@@ -65,7 +65,7 @@ public class DialogManager : MonoBehaviour
     public List<OptionConfig> optionConfigs = new List<OptionConfig>();
     public List<BackgroundConfig> backgroundConfigs = new List<BackgroundConfig>();
 
-    // ==== 分支按钮统一配置（重点！大小/字体/颜色全在这里调整）====
+    // ==== 分支按钮统一配置（大小/字体/颜色全在这里调整）====
     [Header("按钮大小与间距")]
     public Vector2 optionButtonSize = new Vector2(250, 60); // 按钮宽/高
     public int optionSpacing = 70; // 按钮垂直间距

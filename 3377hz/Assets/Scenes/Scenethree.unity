@@ -512,7 +512,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 708933728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a4b0b0275f02714ca4b19ebc906cd23, type: 3}
+  m_Script: {fileID: 11500000, guid: 3af0c6d045edec8488dce1f7b737530c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogDataFile: {fileID: 4900000, guid: 305209c020009584a8ea673e0a3a4482, type: 3}
@@ -530,50 +530,50 @@ MonoBehaviour:
   - itemName: "\u6D77\u4E8B\u56FE"
     itemSprite: {fileID: 21300000, guid: 6883a25fa4a4bca4a99008954f66b61e, type: 3}
     screenPosition: {x: -338, y: -216}
-    itemSize: {x: 465.0521, y: 156.9204}
+    itemSize: {x: 465, y: 156.9}
   - itemName: "\u5E10\u7BF7"
     itemSprite: {fileID: 21300000, guid: 85e9951ea98eb404c85d20f0aa307f64, type: 3}
-    screenPosition: {x: 22.611, y: -47}
-    itemSize: {x: 2132.471, y: 1229.9}
+    screenPosition: {x: 22.61, y: -47}
+    itemSize: {x: 2132.4, y: 1229}
   - itemName: "\u80E1\u5B97\u5BAA"
     itemSprite: {fileID: 21300000, guid: e904b4f8e7a1e3b43a7a169969becb1c, type: 3}
-    screenPosition: {x: 23, y: -196}
-    itemSize: {x: 1449.805, y: 783.9825}
+    screenPosition: {x: 19, y: -177}
+    itemSize: {x: 1814.407, y: 1020.774}
   - itemName: "\u8206\u56FE"
     itemSprite: {fileID: 21300000, guid: 86b93acdc5d0e4f41978be34ea847bb3, type: 3}
-    screenPosition: {x: 33, y: -67.943}
-    itemSize: {x: 1982.347, y: 959.2413}
+    screenPosition: {x: 33, y: -67.9}
+    itemSize: {x: 1982, y: 959.2}
   - itemName: "\u88AB\u7ED1\u58EB\u5175"
     itemSprite: {fileID: 21300000, guid: 46c71606b0da0d84c96cced1126a8204, type: 3}
-    screenPosition: {x: 44, y: -32.286}
-    itemSize: {x: 2425.545, y: 1159.7}
+    screenPosition: {x: 44, y: -32.2}
+    itemSize: {x: 2425, y: 1159}
   - itemName: "\u5BC6\u4FE1"
     itemSprite: {fileID: 21300000, guid: 3c37286774b1bee459483a72ad281ce4, type: 3}
-    screenPosition: {x: 337, y: 232.81}
-    itemSize: {x: 926.3007, y: 629.5116}
+    screenPosition: {x: 337, y: 232.8}
+    itemSize: {x: 926.3, y: 629.5}
   - itemName: "\u8001\u5987"
     itemSprite: {fileID: 21300000, guid: 57dd0c6b5d3727c4182259544c4d8feb, type: 3}
-    screenPosition: {x: 42, y: -30.2458}
-    itemSize: {x: 2408.346, y: 1090.76}
+    screenPosition: {x: 42, y: -30.2}
+    itemSize: {x: 2408, y: 1090}
   - itemName: "\u8D26\u672C"
     itemSprite: {fileID: 21300000, guid: b12adc5c9421fc345be43e21e19bfca1, type: 3}
     screenPosition: {x: 24, y: 57}
-    itemSize: {x: 2593.6, y: 1618.772}
+    itemSize: {x: 2593, y: 1618}
   - itemName: "\u624B\u7A3F"
     itemSprite: {fileID: 21300000, guid: 4afe02396ba7846418d56e70f0834759, type: 3}
     screenPosition: {x: -719, y: -85}
-    itemSize: {x: 1503.526, y: 481.8807}
+    itemSize: {x: 1503, y: 481.8}
   optionConfigs:
   - optionText: "\u5BC6\u5BA4\u7528\u95F4"
-    screenPosition: {x: -0.0001, y: 385}
+    screenPosition: {x: 0.0013, y: 385}
   - optionText: "\u5E10\u4E2D\u8350\u624D"
-    screenPosition: {x: 0.001366, y: 527}
+    screenPosition: {x: 0.0013, y: 527}
   - optionText: "\u8F95\u95E8\u6CBB\u519B"
-    screenPosition: {x: 0.001366, y: 234}
+    screenPosition: {x: 0.0013, y: 234}
   - optionText: "\u8859\u7F72\u8D48\u707E"
-    screenPosition: {x: 0.001357, y: 85}
-  - optionText: "\u6CA1\u4EC0\u4E48\u60F3\u4E86\u89E3\u7684 "
-    screenPosition: {x: -0.000123, y: -62}
+    screenPosition: {x: 0.0013, y: 85}
+  - optionText: "\u6CA1\u4EC0\u4E48\u60F3\u4E86\u89E3\u7684"
+    screenPosition: {x: 0.0013, y: -62}
   backgroundConfigs:
   - backgroundName: "\u519B\u8425\u5916\u9762"
     backgroundSprite: {fileID: 21300000, guid: cebed6e7fc2d625489cc5d379472759c, type: 3}
@@ -591,8 +591,8 @@ MonoBehaviour:
   optionSpacing: 70
   optionFontSize: 40
   optionFontColor: {r: 1, g: 1, b: 1, a: 1}
-  optionFont: {fileID: 0}
-  normalColor: {r: 0, g: 0, b: 0, a: 0.81960785}
+  optionFont: {fileID: 11400000, guid: 5ee67fd329620a34686e3dc872638e9c, type: 2}
+  normalColor: {r: 0, g: 0, b: 0, a: 0.88235295}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
   pressedColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
   disabledColor: {r: 0.4, g: 0.4, b: 0.4, a: 1}
@@ -1479,7 +1479,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 19.872986, y: -7.725342}
+  m_AnchoredPosition: {x: 19.873047, y: -7.725342}
   m_SizeDelta: {x: 39.743, y: 15.451}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2119766021
