@@ -47,6 +47,8 @@ public class TurnToHYX : MonoBehaviour
 
     public void BackMaue()
     {
+
+
         UnityEngine.SceneManagement.SceneManager.LoadScene("FigureSelect");
     }
 }
